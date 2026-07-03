@@ -2,7 +2,7 @@ FROM nginx:1.27-alpine
 
 LABEL org.opencontainers.image.title="Projet CICD - Catal-Log"
 LABEL org.opencontainers.image.description="Image Nginx servant un site statique pour l'évaluation EC06"
-LABEL org.opencontainers.image.source="https://github.com/noahnaze974-cloud/cata-log-cicd:sha-01ce24c
+LABEL org.opencontainers.image.source="https://github.com/noahnaze974-cloud/cata-log-cicd"
 
 COPY site/ /usr/share/nginx/html/
 RUN chmod -R 755 /usr/share/nginx/html
