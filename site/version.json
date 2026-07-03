@@ -1,9 +1,0 @@
-{
-  "app": "catal-log-static-site",
-  "version": "1.0.0",
-  "author": "TON_NOM",
-  "formation": "ASRC - RNCP39611",
-  "bloc": "RNCP39611BC02",
-  "evaluation": "EC06",
-  "description": "Site statique Nginx conteneurise et deploye via CI/CD"
-}
