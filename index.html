@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catal-Log - Projet CICD</title>
+  <style>
+    :root {
+      --bleu-fonce: #1f4e79;
+      --bleu-clair: #e8f2fb;
+      --accent: #2e86c1;
+      --texte: #1f2d3d;
+      --fond: #f4f7fb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: linear-gradient(160deg, var(--fond), #dfeaf5);
+      color: var(--texte);
+      min-height: 100vh;
+    }
+    main {
+      max-width: 900px;
+      margin: 48px auto;
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+      border-top: 6px solid var(--accent);
+    }
+    h1 { color: var(--bleu-fonce); margin-top: 0; }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background: var(--bleu-clair);
+      color: var(--bleu-fonce);
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: .3px;
+    }
+    ul { line-height: 1.8; padding-left: 1.2rem; }
+    li::marker { color: var(--accent); }
+    .etapes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .etape {
+      background: var(--bleu-clair);
+      border: 1px solid #cfe3f5;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: .9rem;
+      color: var(--bleu-fonce);
+    }
+    .etape strong { color: var(--accent); }
+    footer {
+      margin-top: 32px;
+      font-size: .9rem;
+      color: #5d6d7e;
+      border-top: 1px solid #e5ecf3;
+      padding-top: 16px;
+    }
+    code {
+      background: var(--bleu-clair);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: var(--bleu-fonce);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="badge">Projet CICD - EC06</p>
+    <h1>Site statique Catal-Log</h1>
+    <p>
+      Cette page est servie par <strong>Nginx</strong> dans une image Docker
+      construite, testée, publiée et promue automatiquement avec
+      <strong>GitHub Actions</strong>.
+    </p>
+
+    <div class="etapes">
+      <span class="etape"><strong>1.</strong> Commit</span>
+      <span class="etape"><strong>2.</strong> Build + Test</span>
+      <span class="etape"><strong>3.</strong> Publication GHCR</span>
+      <span class="etape"><strong>4.</strong> Recette</span>
+      <span class="etape"><strong>5.</strong> Production simulée</span>
+    </div>
+
+    <ul>
+      <li>Conteneurisation avec Dockerfile (image <code>nginx:1.27-alpine</code>).</li>
+      <li>Tests automatisés dans GitHub Actions (HTTP 200 + contenu).</li>
+      <li>Publication dans GitHub Container Registry avec tag et digest.</li>
+      <li>Promotion simulée <strong>sans reconstruire l'image</strong> : le même artefact est promu.</li>
+    </ul>
+
+    <footer>
+          </footer>
+  </main>
+</body>
+</html>
